@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow Day Calculator</title>
+    <meta name="description" content="Calculate the probability of a snow day based on weather conditions.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>❄️ Snow Day Calculator</h1>
+
+        <div class="input-group">
+            <label>Temperature (°C)</label>
+            <input type="number" id="temp" placeholder="-5">
+        </div>
+
+        <div class="input-group">
+            <label>Snowfall (cm)</label>
+            <input type="number" id="snow" placeholder="15">
+        </div>
+
+        <div class="input-group">
+            <label>Wind Speed (km/h)</label>
+            <input type="number" id="wind" placeholder="20">
+        </div>
+
+        <button onclick="calculateSnowDay()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
