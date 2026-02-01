@@ -3,64 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Snow Day Calculator</title>
-  <meta name="description" content="Advanced snow day calculator to predict school closure probability based on temperature, snowfall, wind speed, and weather conditions.">
+
+  <title>Snow Day Calculator – Predict School Closure Probability</title>
+
+  <meta name="description" content="Use this advanced snow day calculator to predict the probability of school closures based on temperature, snowfall, wind speed, and road conditions.">
+
+  <meta name="keywords" content="snow day calculator, snow day predictor, school closure calculator, snow probability tool">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Snow Day Calculator – Predict School Closure Probability">
+  <meta property="og:description" content="Calculate the likelihood of a snow day using weather conditions like temperature, snowfall, and wind speed.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Snow Day Calculator",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "description": "An online tool to calculate the probability of a snow day based on weather conditions."
+  }
+  </script>
 </head>
 <body>
-  <div class="app">
-    <h1>❄️ Advanced Snow Day Calculator</h1>
-    <p class="subtitle">Estimate the probability of a snow day using weather factors.</p>
+  <main class="app">
+    <header>
+      <h1>❄️ Snow Day Calculator</h1>
+      <p class="subtitle">
+        Predict the probability of a snow day based on real weather factors.
+      </p>
+    </header>
 
-    <div class="grid">
-      <div class="field">
-        <label>Temperature (°C)</label>
-        <input type="number" id="temp" placeholder="-5">
+    <section aria-label="Snow Day Calculator Tool">
+      <h2>Calculate Snow Day Probability</h2>
+
+      <div class="grid">
+        <div class="field">
+          <label for="temp">Temperature (°C)</label>
+          <input type="number" id="temp" placeholder="-5">
+        </div>
+
+        <div class="field">
+          <label for="snow">Snowfall (cm)</label>
+          <input type="number" id="snow" placeholder="20">
+        </div>
+
+        <div class="field">
+          <label for="wind">Wind Speed (km/h)</label>
+          <input type="number" id="wind" placeholder="25">
+        </div>
+
+        <div class="field">
+          <label for="road">Road Conditions</label>
+          <select id="road">
+            <option value="0">Clear</option>
+            <option value="10">Wet</option>
+            <option value="20">Icy</option>
+            <option value="30">Snow Covered</option>
+          </select>
+        </div>
       </div>
 
-      <div class="field">
-        <label>Snowfall (cm)</label>
-        <input type="number" id="snow" placeholder="20">
+      <div class="buttons">
+        <button onclick="calculateSnowDay()">Calculate</button>
+        <button class="reset" onclick="resetForm()">Reset</button>
       </div>
 
-      <div class="field">
-        <label>Wind Speed (km/h)</label>
-        <input type="number" id="wind" placeholder="25">
+      <div class="result-box">
+        <div class="progress">
+          <div id="progress-bar"></div>
+        </div>
+        <h3 id="probability">0%</h3>
+        <p id="message">Enter values to calculate snow day probability.</p>
       </div>
-
-      <div class="field">
-        <label>Road Conditions</label>
-        <select id="road">
-          <option value="0">Clear</option>
-          <option value="10">Wet</option>
-          <option value="20">Icy</option>
-          <option value="30">Snow Covered</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="buttons">
-      <button onclick="calculateSnowDay()">Calculate</button>
-      <button class="reset" onclick="resetForm()">Reset</button>
-    </div>
-
-    <div class="result-box">
-      <div class="progress">
-        <div id="progress-bar"></div>
-      </div>
-      <h2 id="probability">0%</h2>
-      <p id="message">Enter values to calculate snow day probability.</p>
-    </div>
+    </section>
 
     <section class="seo">
-      <h2>How the Snow Day Calculator Works</h2>
+      <h2>What Is a Snow Day?</h2>
       <p>
-        This tool estimates the likelihood of a snow day based on temperature, snowfall,
-        wind speed, and road conditions. Higher snowfall, lower temperatures, strong winds,
-        and poor road conditions increase the probability of school closures.
+        A snow day is a day when schools or offices close due to heavy snowfall,
+        extreme cold, or dangerous road conditions. This snow day calculator estimates
+        the likelihood of such closures using weather factors.
       </p>
+
+      <h2>How Does the Snow Day Calculator Work?</h2>
+      <ul>
+        <li>Low temperatures increase snow day chances.</li>
+        <li>Higher snowfall raises closure probability.</li>
+        <li>Strong winds worsen weather conditions.</li>
+        <li>Icy or snow-covered roads increase risk.</li>
+      </ul>
+
+      <h2>Is This Snow Day Prediction Accurate?</h2>
+      <p>
+        This tool provides an estimated probability based on common weather patterns.
+        Actual school closures may depend on local policies and infrastructure.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>What snowfall amount usually causes a snow day?</h3>
+      <p>Typically, snowfall above 10–20 cm significantly increases the chance of school closures.</p>
+
+      <h3>Does temperature matter more than snowfall?</h3>
+      <p>Both are important, but extreme cold combined with snowfall has the highest impact.</p>
+
+      <h3>Can I use this calculator for any country?</h3>
+      <p>Yes, but results are general estimates and may vary by region.</p>
     </section>
-  </div>
+
+    <footer>
+      <p>© 2026 Snow Day Calculator Tool</p>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
