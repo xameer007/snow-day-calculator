@@ -1,64 +1,123 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.container {
-    background: #020617;
-    padding: 25px 30px;
-    border-radius: 12px;
-    width: 320px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.app {
+  max-width: 720px;
+  width: 100%;
+  background: #020617;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 6px;
 }
 
-.input-group {
-    margin-bottom: 12px;
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
-label {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 4px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
+.field label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 6px;
-    background: #2563eb;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+}
+
+button.reset {
+  background: #334155;
 }
 
 button:hover {
-    background: #1d4ed8;
+  opacity: 0.9;
 }
 
-#result {
-    margin-top: 15px;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
+.result-box {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  text-align: center;
+}
+
+.progress {
+  width: 100%;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #22c55e, #eab308, #ef4444);
+  transition: width 0.5s ease;
+}
+
+#probability {
+  font-size: 32px;
+  margin: 5px 0;
+}
+
+.seo {
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
