@@ -9,10 +9,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px 10px;
+  margin: 0;
 }
 
 .app {
-  max-width: 720px;
+  max-width: 900px;
   width: 100%;
   background: #020617;
   padding: 25px 30px;
@@ -105,15 +106,34 @@ button:hover {
 }
 
 #probability {
-  font-size: 32px;
+  font-size: 36px;
   margin: 5px 0;
 }
 
 .seo {
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.seo table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.seo th, .seo td {
+  border: 1px solid #1e293b;
+  padding: 10px;
+  text-align: left;
+}
+
+footer {
   margin-top: 25px;
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.9;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.7;
 }
 
 @media (max-width: 600px) {
