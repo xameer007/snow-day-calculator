@@ -1,143 +1,144 @@
 * {
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  padding: 40px 10px;
-  margin: 0;
-}
-
-.app {
-  max-width: 900px;
-  width: 100%;
-  background: #020617;
-  padding: 25px 30px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 6px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-}
-
-.field label {
-  font-size: 13px;
-  margin-bottom: 6px;
-  display: block;
-}
-
-.field input,
-.field select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-button {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  background: #2563eb;
-  color: #fff;
-}
-
-button.reset {
-  background: #334155;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-.result-box {
-  margin-top: 20px;
-  padding: 18px;
-  border-radius: 12px;
-  background: #020617;
-  border: 1px solid #1e293b;
-  text-align: center;
-}
-
-.progress {
-  width: 100%;
-  height: 12px;
-  background: #1e293b;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 12px;
-}
-
-#progress-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #22c55e, #eab308, #ef4444);
-  transition: width 0.5s ease;
-}
-
-#probability {
-  font-size: 36px;
-  margin: 5px 0;
-}
-
-.seo {
-  margin-top: 30px;
-  font-size: 15px;
-  line-height: 1.7;
-  opacity: 0.95;
-}
-
-.seo table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 15px 0;
-}
-
-.seo th, .seo td {
-  border: 1px solid #1e293b;
-  padding: 10px;
-  text-align: left;
-}
-
-footer {
-  margin-top: 25px;
-  text-align: center;
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
   }
-}
+  
+  body {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+    margin: 0;
+  }
+  
+  .app {
+    max-width: 900px;
+    width: 100%;
+    background: #020617;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .field label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #2563eb;
+    color: #fff;
+  }
+  
+  button.reset {
+    background: #334155;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .result-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    text-align: center;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 12px;
+    background: #1e293b;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  
+  #progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22c55e, #eab308, #ef4444);
+    transition: width 0.5s ease;
+  }
+  
+  #probability {
+    font-size: 36px;
+    margin: 5px 0;
+  }
+  
+  .seo {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.95;
+  }
+  
+  .seo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  
+  .seo th, .seo td {
+    border: 1px solid #1e293b;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
